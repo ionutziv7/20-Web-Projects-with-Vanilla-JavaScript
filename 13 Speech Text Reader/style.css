@@ -58,6 +58,10 @@ select:focus {
   transition: all 1s ease-in-out;
 }
 
+.text-box.show {
+  transform: translate(-50%, 0);
+}
+
 .text-box select {
   background-color: darksalmon;
   border: 0;
@@ -68,7 +72,7 @@ select:focus {
 }
 
 .text-box textarea {
-  border: 1px solid #dadada;
+  border: 1px #dadada solid;
   border-radius: 4px;
   font-size: 16px;
   padding: 8px;
@@ -94,7 +98,7 @@ main {
 }
 
 .box {
-  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   cursor: pointer;
   display: flex;
@@ -104,7 +108,7 @@ main {
 }
 
 .box.active {
-  box-shadow: 0 0 10 5px darksalmon;
+  box-shadow: 0 0 10px 5px darksalmon;
 }
 
 .box img {
@@ -125,17 +129,19 @@ main {
   height: 100%;
 }
 
-@media(max-width: 1100px) {
+@media (max-width: 1100px) {
   main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media(max-width: 760px) {
+
+@media (max-width: 760px) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media(max-width: 500px) {
+
+@media (max-width: 500px) {
   main {
     grid-template-columns: 1fr;
   }
